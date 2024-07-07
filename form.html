@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <!-- <link rel="stylesheet" href="form.css"> -->
+    <link rel="stylesheet" href="formtailw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .transition-max-height {
+      transition: max-height 0.5s;
+    }
+    .disable{
+        background-color: rgb(141, 140, 140);
+        color: rgb(225, 222, 222);
+        /* pointer-events: none; */
+    }
+    .hidden-error{
+        display: none;
+    }
+        .invalid:before {
+            content: '✗ ';
+            color: red;
+        }
+
+        .valid:before {
+            content: '✓ ';
+            color: green;
+        }
+
+        .invalid {
+            color: red;
+        }
+
+        .valid {
+            color: green;
+        } 
+        
+    </style>
+</head>
+
+<body style="background-color: rgb(241, 232, 215);">
+    
+    <div class="container w-full h-screen ">
+        <div class="form-box bg-white  w-2/6  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-12">
+            <h1 class="text-3xl font-bold mb-10 mt-1 text-center text-green-800 relative underline" id="formTitle">Sign Up</h1>
+            <form id="form">
+                <div class="input-group">
+                    <div id="nameField" class="form-control  flex  items-center rounded-sm mb-5 bg-gray-200 overflow-hidden max-h-16 transition-max-height ">
+                        <i class="fa-solid fa-user ml-1 p-2"></i>
+                        <input type="text" placeholder="Name" id="Name" class="w-11/12 bg-transparent border-0 outline-0 p-2 ">
+                        <small class="text-red-500 text-sm absolute mt-1 top-40 left-12"></small>
+                    </div>
+                    
+                    <div id="emailField" class="form-control  flex items-center rounded-sm mb-5 bg-gray-200">
+                        <i class="fas fa-envelope ml-1 p-2"></i>
+                        <input type="email" placeholder="Email" id="email" class="w-11/12 bg-transparent border-0 outline-0 p-2">
+                        <small class="text-red-600 text-sm mt-1 absolute bottom-64 left-12"></small>
+                    </div>
+                    <div id="passwordField" class="form-control relative flex  rounded-sm mb-5 bg-gray-200">
+                        <i class="fa-solid fa-key ml-1 p-2"></i>
+                        <input type="password" placeholder="password" id="password" class="w-11/12 bg-transparent border-0 outline-0 p-2 left-0">
+                        <small class="text-red-600 text-sm mt-1 hidden"></small>
+                          
+                        </div>
+                        <div id="message" class="hidden mt-0">
+                            <h3 class="font-semibold ">Password must contain:</h3>
+                            <p id="letter" class="invalid  mt-1 ">At least <b>one lowercase letter</b></p>
+                            <p id="capital" class="invalid  mt-1">At least <b>one uppercase letter</b></p>
+                            <p id="number" class="invalid  mt-1">At least <b>one number</b></p>
+                            <p id="length" class="invalid  mt-1">Minimum <b>8 characters</b></p>
+                        </div>   
+                        
+                    
+                        <!-- <small class="text-red-600 text-sm mt-1 hidden-error"></small> -->
+                    
+                    <div id="confirmField" class="form-control  flex items-center rounded-sm mb-5 bg-gray-200 overflow-hidden max-h-16">
+                        <i class="fa-solid fa-key ml-1 p-2"></i>
+                        <input type="password" placeholder="Confirm Password" id="cPassword" class="w-11/12 bg-transparent border-0 outline-0 p-2">
+                        <small class="text-red-600 text-sm mt-3 absolute bottom-36 left-12"></small>
+                    </div>
+                    <div class="btn w-full flex justify-between" id="submitButton">
+                        <button class="bg-green-800 basis-48 text-white h-10 rounded-full " type="button" id="signupBtn">Sign Up</button>
+                        <button class=" bg-green-800 basis-48 text-white h-10 rounded-full disable" type="button" id="signinBtn">Sign In</button>
+                    </div>
+                    <button class="bg-green-800 mt-2 h-10 w-full text-white  rounded-full " type="submit" id="subButton">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="form.js"></script>
+</body>
+
+</html>

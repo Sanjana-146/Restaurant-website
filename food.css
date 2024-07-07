@@ -1,0 +1,530 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* home section styling */
+.container{
+    background-image: linear-gradient(rgba(60, 32, 17, 0.7), rgba(61, 37, 21, 0.7)), url('/foodimg/homebg.jpg') ;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 90px;
+    background-color: black;
+}
+header.sticky{
+    background-color: black;
+}
+
+header ul{
+    padding: 10px;
+}
+header li{
+    display: inline-block;
+    padding: 10px;
+}
+header a{
+    text-decoration: none;
+    color: white;
+    /* width: 100%; */
+    display: block;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+header a:hover{
+    color: green;
+}
+
+.cart{
+    background-color: rgb(1, 117, 1);
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 4px;
+    padding: 15px;
+    top: 20px;
+    right: 20px;
+}
+.login{
+    background-color: rgb(1, 117, 1);
+    outline: none;
+    border: 0;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    position: absolute;
+    color: whitesmoke;
+    top: 20px;
+    right: 80px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 15px 15px 15px 15px;
+}
+.login-user{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 90px;
+    padding: 15px 15px 15px 15px;
+    background-color: rgb(1, 117, 1);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.logout-btn{
+    position: absolute;
+    top: 75px;
+    right: 30px;
+    background-color: whitesmoke;
+    width: 100px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.visibled{
+    display: block;
+}
+.logo{
+    /* mix-blend-mode: multiply; */
+    filter: invert(100%);
+    border-radius: 5px;
+    /* background: transparent; */
+    position: absolute;
+    color: white;
+    right: 700px;
+    top: 10px;
+    width: 80px;
+    height: 80px; 
+}
+.chicken{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    margin-left: 100px;
+    margin-top: 120px;
+}
+.head3{
+    color: yellow;
+    font-size: 30px;
+    position: absolute;
+    top: 200px;
+    left: 700px;
+}
+.head1{
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    left: 690px;
+    top: 250px;
+}
+.para1{
+    color: whitesmoke;
+    position: absolute;
+    font-size: 20px;
+    left: 700px;
+    top: 410px;
+}
+.order-now{
+    background-color: rgb(3, 97, 3);
+    color: white;
+    outline: none;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    top: 500px;
+    left: 700px;
+    cursor: pointer;
+}
+.order-now:hover{
+    background-color :rgb(25, 138, 3);
+}
+.carti{
+    padding: 5px;
+}
+/* menu Section styling */
+.container2{
+    width: 100%;
+    height: 100vh;
+    padding: 70px;
+    background-color: rgb(241, 232, 215);
+}
+.headmenu{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(3, 97, 3);
+    margin-top: 15px;
+}
+.para2{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: black;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.buttons button{
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: whitesmoke;
+    color: black;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 12rem;
+    height: 50px;
+}
+.buttons button:focus{
+    background-color: rgb(3, 97, 3);
+}
+.foodIcon{
+    color: black;
+    padding: 6px;
+}
+
+.menu-container{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3,0fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.menu-box{
+    width: 95%;
+    margin-top: 15px;
+}
+.menu-box .menu-card{
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    height: 400px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    
+}
+
+.starIcon{
+    color: rgb(243, 212, 73);
+}
+.menu-box .menu-card .menu-info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 20px;
+    color: black;
+}
+.menu-box .menu-card .menu-info p{
+    text-align: center;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.menu-box .menu-card .menu-info h3{
+    text-align: center;
+    margin-top: 10px; 
+}
+.menu-box .menu-card .menu-info .menu-icon{
+    text-align: center;
+    margin: 10px, 0 20px 5px;
+}
+.menu-box .menu-card .menu-info .menu-btn{
+    background-color: rgb(3, 97, 3);
+    border-radius: 7px;
+    color: black;
+    margin-top: 8px;
+   cursor: pointer;
+    width: 200px;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    padding: 10px 10px;
+}
+.menu-box .menu-card .menu-info .menu-btn:hover{
+    background-color: rgb(25, 138, 3);
+}
+.category{
+    display: none;
+} 
+.category.active{
+    display: grid;
+    grid-template-columns: repeat(3,0fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;   
+}
+/* popular dishes styling */
+.container3{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    background-color: rgb(241, 232, 215);
+}
+.popular h1{
+    text-align: center;
+    color: rgb(3, 97, 3);
+    font-size: 45px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+.dish1-img img{
+    width: 42%;
+    height: 280px;
+    margin-top: 16px;
+    margin-left: 20px;
+    border-radius: 10px;
+    
+}
+.popular-dish h1{
+    margin-top: -250px;
+    color: whitesmoke;
+    margin-left: 28px; 
+}
+.popular-dish p{
+    color: white;
+    margin-top: 8px;
+    margin-left: 28px;
+}
+.popular-dish h3{
+    color: white;
+    margin-top: 8px;
+    margin-left: 28px;
+    font-size: 30px;
+}
+.popular-dish .dish-btn{
+    background-color: rgb(3, 97, 3);
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 28px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.popular-dish .dish-btn:hover{
+    background-color: rgb(25, 138, 3);
+}
+.popular-dish2 .dish2-img img{
+    width: 45%;
+    height: 250px;
+    margin-top: 80px;
+    margin-left: 21px;
+    border-radius: 10px;
+}
+.popular-dish2 h1{
+    margin-left: 25rem;
+    margin-top: -210px;
+    
+}
+.popular-dish2 p{
+    margin-left: 25rem;
+}
+.popular-dish2 h3{
+    margin-left: 25rem;
+    font-size: 30px;
+}
+.popular-dish2 .dish-btn{
+    margin-left: 25rem;
+    cursor: pointer;
+}
+ .popular-dish3{
+    text-align: end;
+    margin-top: -225px;
+    margin-right: 20px;
+}
+.popular-dish3 .dish3-img img{
+    width: 52%;
+    height: 250px;
+    border-radius: 10px;
+}
+.popular-dish3 h1{
+    margin-right: 28rem;
+    margin-top: -220px;
+    color: black;
+}
+.popular-dish3 p{
+    margin-right: 25rem;
+    color: black;
+    font-weight: bold;
+}
+.popular-dish3 h3{
+    margin-right: 41rem;
+    color: black;
+    font-size: 30px;
+}
+.popular-dish3 .dish-btn{
+    margin-right: 39rem;
+    cursor: pointer;
+} 
+.popular-dish4{
+    text-align: end;
+    margin-top: -480px;
+    margin-right: 20px;
+}
+.popular-dish4 .dish4-img img{
+    width: 55%;
+    height: 280px;
+    border-radius: 10px;
+}
+.popular-dish4 h1{
+    margin-right: 8.5rem;
+    margin-top: -250px;
+    color: black;
+}
+.popular-dish4 p{
+    margin-right: 3.5rem;
+    color: black;
+    font-weight: bold;
+}
+.popular-dish4 h3{
+    margin-right: 20rem;
+    color: black;
+    font-size: 30px;
+}
+.popular-dish4 .dish-btn{
+    margin-right: 17rem;
+    cursor: pointer;
+} 
+/* Reviews Section */
+.container4{
+    width: 100%;
+    margin-top: 350px;
+    height: 100vh;
+    padding: 70px 0;
+    background-color: rgb(241, 232, 215); 
+}
+.slider-wrapper{
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 70px 55px;
+}
+.heading-review{
+    text-align: center;
+}
+.heading-review h1{
+    color: black;
+    font-size: 60px;
+}
+.heading-review h3{
+    color: rgb(3, 97, 3);
+    font-size: 19px;
+}
+.heading-review p{
+    color: rgb(42, 41, 41);
+    margin-top: 10px;
+}
+.review{
+    justify-content: center;
+    display: flex;
+    margin-top: 80px;
+}
+.review-box .review-info{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    height: 300px;
+    /* width: 350px; */
+    user-select: none;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+.slider-wrapper .swiper-pagination-bullet{
+    background: rgb(3, 97, 3);
+    height: 15px;
+    width: 15px;
+}
+.slider-wrapper .swiper-slide-button{
+    color: rgb(3, 97, 3);
+    margin-top: -50px;
+}
+.review-box .review-info .user-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.review-box .review-info .rating{
+    margin-top: 10px;
+}
+.user-name{
+    margin-top: 10px;
+}
+.review-para{
+    margin-top: 10px;
+}
+
+/* Contact Section */
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background-color: rgb(18, 17, 17);
+    color: white;
+}
+footer .footer-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+footer .footer-main .footer-tag{
+    text-align: center;
+}
+footer .footer-main .footer-tag h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    margin-top: 50px;
+}
+footer .footer-main .footer-tag p{
+    margin: 10px;
+}
+footer .footer-main .footer-tag ul{
+    list-style: none;
+}
+footer .footer-main .footer-tag ul li{
+    margin-bottom: 10px;
+}
+footer .footer-main .footer-tag ul li a{
+    text-decoration: none;
+    color: white;
+}
+footer .footer-main .footer-tag ul li a:hover{
+    color: rgb(15, 138, 15);
+}
+footer .footer-main .footer-tag i{
+    padding: 7px;
+    cursor: pointer;
+    font-size: 25px;
+}
+footer .footer-main .footer-tag i:hover{
+    color: rgb(15, 138, 15);
+}
